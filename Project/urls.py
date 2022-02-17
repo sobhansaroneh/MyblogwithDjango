@@ -16,11 +16,13 @@ Including another URLconf
 from django import urls
 from django.contrib import admin
 from django.urls import path , include
-from Blog.views import shop,blog
+from Blog.views import Index
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('' , include('Blog.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+    
     
 ]

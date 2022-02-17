@@ -125,9 +125,13 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import os
 # CKeditor settings
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+# Templates Directory
+TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-
+STATICFElLS_DIR = (
+    os.path.join(BASE_DIR , 'static'),
+)
 # CKeditor
 CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
 CKEDITOR_UPLOAD_PATH = 'uploads/'
