@@ -13,7 +13,7 @@ class Index(TemplateView):
     def get(self , request , **kwargs):
         
         article_data = []
-        all_article = Article.objects.all().order_by('-created')[:3]
+        all_article = Article.objects.all().order_by('-created')[:4]
         for article in all_article:
             article_data.append({
                 'title':article.title,

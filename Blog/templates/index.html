@@ -19,17 +19,17 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">وبلاگ شخصی من</a>
+                <a class="navbar-brand" href="index">وبلاگ شخصی من</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">خانه</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">درباره من</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">پست‌ها</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">راه ارتباط</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index">خانه</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about">درباره من</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post">مطالب</a></li>
+                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact">راه ارتباط</a></li>
                     </ul>
                 </div>
             </div>
@@ -40,8 +40,8 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <div class="site-heading">
-                            <h1>Clean Blog</h1>
-                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                            <h1>سبحان سارونه</h1>
+                            <span class="subheading">وبلاگ شخصی سبحان سارونه</span>
                         </div>
                     </div>
                 </div>
@@ -56,12 +56,13 @@
                     <div class="post-preview">
                         <a href="post.html">
                             <h2 class="post-title">{{ article.title}}</h2>
-                            <h3 class="post-subtitle">{{article.description | truncatechars:40}}</h3>
+                            <h3 class="post-subtitle">{{article.description | truncatechars:90}}</h3>
                         </a>
                         <p class="post-meta">
+                            
+                            <a href="#!">{{ article.date }}</a>
                             Posted by
-                            <a href="#!">{{ article.created }}</a>
-                            on September 24, 2021
+                            <!--September 24, 2021 --> 
                         </p>
                     </div>
                     {%endfor%}
@@ -69,7 +70,7 @@
                     <!-- Divider-->
                     <hr class="my-4" />
                     <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
+                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">پست‌های قدیمی </a></div>
                 </div>
             </div>
         </div>

@@ -1,3 +1,4 @@
+from pyexpat import model
 from tabnanny import verbose
 from time import timezone
 from django.contrib.auth.models import User
@@ -22,6 +23,7 @@ class Article(models.Model):
     title = models.CharField(max_length=30)
     content  = RichTextField(max_length=1000)
     created = models.DateField(auto_now=True)
-    writer = models.ForeignKey('Author' , on_delete=models.CASCADE)
+    writer = models.ForeignKey('Author' , on_delete=models.CASCADE),
+    created_at = models.DateField(auto_now=True)
     def __str__(self):
         return f"{self.title}"
