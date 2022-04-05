@@ -15,14 +15,16 @@ Including another URLconf
 """
 from django import urls
 from django.contrib import admin
-from django.urls import path , include
-from Blog.views import Index
+from django.urls import path, include
+from Blog.api_urls import router
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('' , include('Blog.urls')),
+    path('', include('Blog.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('api/', include(router.urls)),
+
     
     
 ]

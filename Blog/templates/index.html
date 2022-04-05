@@ -54,13 +54,13 @@
                     <!-- Post preview-->
                     {% for article in article_data %}
                     <div class="post-preview">
-                        <a href="post.html">
+                        <a href="{% url 'detail_post' article.id %}">
                             <h2 class="post-title">{{ article.title}}</h2>
-                            <h3 class="post-subtitle">{{article.description | truncatechars:90}}</h3>
+                            <h3 class="post-subtitle">{{article.content | truncatechars:90}}</h3>
                         </a>
                         <p class="post-meta">
                             
-                            <a href="#!">{{ article.date }}</a>
+                            <a href="#!">{{ article.created }}</a>
                             Posted by
                             <!--September 24, 2021 --> 
                         </p>

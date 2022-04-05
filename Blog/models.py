@@ -27,3 +27,6 @@ class Article(models.Model):
     created_at = models.DateField(auto_now=True)
     def __str__(self):
         return f"{self.title}"
+    class Meta:
+        verbose_name = 'مقاله'
+        verbose_name_plural = "مقالات"
