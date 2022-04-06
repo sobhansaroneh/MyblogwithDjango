@@ -59,4 +59,4 @@ class DetailPost(TemplateView):
         context = {
             'article': article
         }
-        return render(request, 'detail_post.html', context=context)
+        return render(request, 'detail.html', context=context)
